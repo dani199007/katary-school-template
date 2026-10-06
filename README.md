@@ -1,17 +1,27 @@
-# Katary Dev School — Template
+# Katary School — Plantilla
 
-Proyecto base para la sesión práctica: **API .NET 9 + React (Vite) + agente de IA**.
-Adáptalo a tu idea: tienda, portafolio, recetario, lo que quieras.
+Proyecto base para la sesión práctica: **API .NET 9 + React (Vite)**, pensado para que lo adaptes a tu idea **dirigiendo a tu asistente de código** (OpenCode, Claude Code o Codex).
+
+## Trabaja con tu asistente de código
+
+1. Abre tu asistente **dentro de esta carpeta** (`opencode`, `claude` o `codex`).
+2. Completa **IDEA.md** con su ayuda: es el contexto de tu proyecto.
+3. **AGENTS.md** le dice a tu asistente que lea IDEA.md antes de cada tarea y qué reglas seguir (Claude Code lo lee a través de **CLAUDE.md**).
+4. Pide cambios pequeños, pide que compile para verificar y **haz commit** después de cada paso.
+
+¿No tienes las herramientas? Sigue la guía de preparación de la clase: https://school.katary.co/preparacion
 
 ```
+AGENTS.md  Reglas para tu asistente de código (CLAUDE.md lo importa)
+IDEA.md    Tu idea: el contexto de tu asistente
 backend/   Minimal API en C#  → http://localhost:5080
 frontend/  React + TypeScript → http://localhost:5173
-IDEA.md    Tu idea en 3 líneas
 ```
 
 ## Requisitos
 - Git, Node.js 20+, .NET SDK 9
-- Una cuenta de Google (API key gratis de Gemini)
+- Un asistente de código: OpenCode (gratis), Claude Code o Codex
+- (Bonus, opcional) Una cuenta de Google para la API key gratis de Gemini
 
 ## Correr el proyecto
 
@@ -27,7 +37,7 @@ cp .env.example .env
 npm run dev
 ```
 
-## Conectar el agente de IA (gratis)
+## Bonus: el asistente de tu producto (chat con IA gratis)
 
 ### Opción A — Google Gemini (recomendada)
 1. Crea tu key en https://aistudio.google.com/apikey
@@ -61,7 +71,7 @@ Reinicia la API después de guardar la key. **Nunca** pongas la key en `appsetti
 
 Para probar la API sin frontend usa `backend/KataryApi.http` (VS Code + extensión REST Client, o Rider/Visual Studio).
 
-## ¿Cómo funciona el agente?
+## ¿Cómo funciona el chat del producto?
 
 `POST /api/agent` recibe la conversación, y `AgentService`:
 1. Toma tu **system prompt** (la personalidad).
