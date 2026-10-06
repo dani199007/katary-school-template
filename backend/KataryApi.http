@@ -1,0 +1,15 @@
+@api = http://localhost:5080
+
+GET {{api}}/api/items
+
+###
+POST {{api}}/api/items
+Content-Type: application/json
+
+{ "name": "Nuevo elemento", "description": "Creado desde el archivo .http", "category": "Pruebas", "price": 1000 }
+
+###
+POST {{api}}/api/agent
+Content-Type: application/json
+
+{ "messages": [ { "role": "user", "content": "¿Qué me recomiendas si me gusta el café dulce?" } ] }

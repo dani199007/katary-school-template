@@ -1,0 +1,11 @@
+# .NET
+bin/
+obj/
+# Node
+node_modules/
+dist/
+# Env (¡nunca subas tus keys!)
+.env
+.env.local
+.DS_Store
+*.tsbuildinfo
