@@ -1,8 +1,8 @@
-// 👉 PASO React: ponle la marca de TU proyecto.
+// La marca de TU proyecto (coincide con IDEA.md).
 export const config = {
-  brandName: "Café Andino",
-  tagline: "Café de especialidad colombiano, directo de la finca a tu taza.",
-  accentColor: "#f28d27",
-  itemsTitle: "Nuestros productos",
-  agentName: "Lua",
+  brandName: "Mi lista de tareas",
+  tagline: "Hazlo, olvídalo, anótalo",
+  accentColor: "#F59E0B",
+  itemsTitle: "Mis tareas",
+  agentName: "Boli",
 };

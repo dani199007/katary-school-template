@@ -3,21 +3,21 @@
 > Completa este archivo con ayuda de tu asistente de código. Él lo lee antes de cada tarea (ver AGENTS.md).
 
 ## ¿Qué es?
-<!-- Una frase. Ej: Tienda online de café de especialidad colombiano. -->
+Una app para anotar tareas pendientes.
 
 ## ¿Para quién?
-<!-- Quién lo va a usar. -->
+Para cualquier persona que quiera apuntar sus pendientes rápidamente y borrarlos cuando los cumpla.
 
 ## Elementos que maneja
-<!-- Qué guarda tu proyecto y sus campos. Ej: Productos con nombre, descripción, categoría y precio. -->
+Tareas con id (número) y texto (lo que hay que hacer).
 
 ## Dato extra
-<!-- Un campo nuevo que tendrá cada elemento, con su tipo. Ej: stock (número entero). -->
+Completada (booleano) para saber si la tarea ya se hizo.
 
 ## Marca
-- Nombre:
-- Eslogan:
-- Color principal (hex):
+- Nombre: Mi lista de tareas
+- Eslogan: Hazlo, olvídalo, anótalo
+- Color principal (hex): #F59E0B
 
 ## Asistente de mi producto (bonus)
-<!-- Qué haría el chat dentro de tu app. Ej: Recomienda cafés según el gusto del cliente. -->
+Sugerir cómo dividir una tarea grande en pasos pequeños.

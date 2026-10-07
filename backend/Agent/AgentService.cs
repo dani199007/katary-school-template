@@ -13,7 +13,7 @@ public class AgentException(string message) : Exception(message);
 
 // El "agente": arma el contexto (personalidad + catálogo + conversación)
 // y se lo envía al LLM por HTTP en formato compatible con OpenAI.
-public class AgentService(HttpClient http, IOptions<AgentOptions> options, ItemStore store)
+public class AgentService(HttpClient http, IOptions<AgentOptions> options, TareaStore store)
 {
     private static readonly JsonSerializerOptions Json = new(JsonSerializerDefaults.Web);
     private readonly AgentOptions _options = options.Value;

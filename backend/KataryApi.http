@@ -1,15 +1,18 @@
 @api = http://localhost:5080
 
-GET {{api}}/api/items
+GET {{api}}/api/tareas
 
 ###
-POST {{api}}/api/items
+POST {{api}}/api/tareas
 Content-Type: application/json
 
-{ "name": "Nuevo elemento", "description": "Creado desde el archivo .http", "category": "Pruebas", "price": 1000 }
+{ "texto": "Llamar al dentista", "completada": false }
+
+###
+DELETE {{api}}/api/tareas/1
 
 ###
 POST {{api}}/api/agent
 Content-Type: application/json
 
-{ "messages": [ { "role": "user", "content": "¿Qué me recomiendas si me gusta el café dulce?" } ] }
+{ "messages": [ { "role": "user", "content": "Tengo que preparar un examen grande, ¿cómo lo divido?" } ] }

@@ -1,13 +1,10 @@
-// Debe coincidir con backend/Models/Item.cs (en camelCase).
-// 👉 PASO React: agrega aquí la propiedad nueva que creaste en .NET.
-export type Item = {
+// Debe coincidir con backend/Models/Tarea.cs (en camelCase).
+export type Tarea = {
   id: number;
-  name: string;
-  description: string;
-  category: string;
-  price: number;
+  texto: string;
+  completada: boolean;
 };
 
-export type NewItem = Omit<Item, "id">;
+export type NuevaTarea = Omit<Tarea, "id">;
 
 export type ChatMessage = { role: "user" | "assistant"; content: string };

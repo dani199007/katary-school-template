@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
 import { api } from "./api";
 import { config } from "./config";
-import type { Item } from "./types";
+import type { Tarea } from "./types";
 import { AgentChat } from "./components/AgentChat";
-import { ItemForm } from "./components/ItemForm";
-import { ItemList } from "./components/ItemList";
+import { TareaForm } from "./components/TareaForm";
+import { TareaList } from "./components/TareaList";
 
 export default function App() {
-  const [items, setItems] = useState<Item[]>([]);
+  const [tareas, setTareas] = useState<Tarea[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const load = () =>
     api
-      .getItems()
+      .getTareas()
       .then((data) => {
-        setItems(data);
+        setTareas(data);
         setError(null);
       })
       .catch(() => setError("No pudimos conectar con la API. ¿Está corriendo `dotnet run` en backend/?"));
@@ -37,8 +37,8 @@ export default function App() {
         <section>
           <h2>{config.itemsTitle}</h2>
           {error && <p className="error">{error}</p>}
-          <ItemList items={items} onDelete={(id) => api.deleteItem(id).then(load)} />
-          <ItemForm onCreated={load} />
+          <TareaList tareas={tareas} onDelete={(id) => api.borrarTarea(id).then(load)} />
+          <TareaForm onCreated={load} />
         </section>
         <AgentChat />
       </main>

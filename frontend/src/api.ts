@@ -1,4 +1,4 @@
-import type { ChatMessage, Item, NewItem } from "./types";
+import type { ChatMessage, NuevaTarea, Tarea } from "./types";
 
 const API_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5080";
 
@@ -21,9 +21,9 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
 }
 
 export const api = {
-  getItems: () => request<Item[]>("/api/items"),
-  createItem: (item: NewItem) => request<Item>("/api/items", { method: "POST", body: JSON.stringify(item) }),
-  deleteItem: (id: number) => request<void>(`/api/items/${id}`, { method: "DELETE" }),
+  getTareas: () => request<Tarea[]>("/api/tareas"),
+  crearTarea: (tarea: NuevaTarea) => request<Tarea>("/api/tareas", { method: "POST", body: JSON.stringify(tarea) }),
+  borrarTarea: (id: number) => request<void>(`/api/tareas/${id}`, { method: "DELETE" }),
   askAgent: (messages: ChatMessage[]) =>
     request<{ reply: string }>("/api/agent", { method: "POST", body: JSON.stringify({ messages }) }),
 };
